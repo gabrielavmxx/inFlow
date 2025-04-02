@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+h1, p, a
+{
+    font-family: "Inter Tight";
+}
+
+.nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav_titulo
+{
+    font-family: "Belanosima";
+    font-size: 40px;
+    margin: 0;
+}
+
+.nav_items
+{
+    display: flex;
+    gap: 40px;
+}
+
+.nav_item
+{
+    margin: 0px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.botao_login
+{
+    border-style: none;
+    padding: 10px 30px;
+    border-radius: 40px;
+    background-color: teal;
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.bloco1
+{
+    display: flex;
+    flex-direction: row;
+    padding: 60px 40px;
+    justify-content: space-evenly;
+    padding-right: 100px;
+}
+
+.titulo_principal
+{
+    font-size: 50px;
+}
+
+.paragrafo_principal
+{
+    font-size: 30px;
+}
+
+.botao_titulo
+{
+    border-style: none;
+    padding: 20px 40px;
+    border-radius: 50px;
+    margin-top: 20px;
+    background-color: teal;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.botao_titulo:hover
+{
+    background-color: rgb(12, 94, 94);
+    transition: ease-in-out;
+    transition: 0.8s;
+}
+
+.corpo_items
+{
+    width: 700px;
+}
+
+.imagem_japones
+{
+    height: 100%;
+}
+
+.bloco2
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.quadrado
+{
+    background-color: red;
+    width: 400px;
+    height: 200px;
+}
+
+.blocos_quebra_linha
+{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.titulo-quebra-sessao
+{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 50px;
+}
+
+.textos-principais-calc
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.paragrafo_calc
+{
+    font-size: 25px;
+    width: 1260px;
+    margin: 20px;
+}
+
+.titulo_calc
+{
+    font-size: 50px;
+    margin: 0;
+}
+
+.calculadora_financeira
+{
+    display: flex;
+    flex-direction: row;
+    background-color: teal;
+    border-radius: 20px;
+    width: 1000px;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.bloco3
+{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.textos-calc
+{
+    padding: 40px;
+    width: 50%;
+    color: aliceblue;
+}
+
+.img_calc
+{
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    background-image: url(calculadora.jpeg);
+    width: 50%;
+}
+
+input {
+    border-style: none;
+    border-radius: 20px;
+    padding: 10px 0px;
+    width: 100%;
+    background-color: azure;
+    text-align: center;
+    font-size: 16px; 
+}
+
+.botao_calc {
+    margin-top: 40px;
+    border-radius: 20px;
+    border-style: none;
+    width: 100%;
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #1dd0c7;
+    color: aliceblue;
+}
+
+.botao_calc:hover
+{
+    background-color: #20b3ab;
+    transition: ease-in-out 0.8s;
+}
+
+.paragrafo-quebra-sessao
+{
+    width: 1200px;
+    font-size: 25px;
+}
+
+.rodape
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+    padding-top: 40px;
+    border-top: 2px solid rgb(0, 0, 0, 0.2);
+    margin-top: 60px;
+    align-items: center;
+}
+
+.rodape_items
+{
+    display: flex;
+    gap: 30px;
+    width: 900px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.direitos-autorais
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.icons-rodape
+{
+    gap: 30px;
+}
+
+#icone
+{
+    width: 50px;
+    height: 100%;
+    font-size: 25px;
+}
+
+.paragrafo-quebra-sessao
+{
+    font-size: 25px;
+}
