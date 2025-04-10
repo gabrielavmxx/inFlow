@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/login.css">
 </head>
+
 <body>
     <main>
         <div class="esquerda">
             <div class="imagem-lateral">
-                <img src="loginCadastro.jpg" alt="">
+                <img src="assets/img/loginCadastro.jpg" alt="Família no mercado">
             </div>
         </div>
         <div class="direita">
             <div class="formulario-login">
-                <div class="logo"><h1>In<span>Flow</span></h1></div>
+                <div class="logo">
+                    <h1>In<span>Flow</span></h1>
+                </div>
                 <div class="formulario-cadastro">
                     <div class="formulario-principal">
                         <label>Nome do usuário</label>
@@ -36,6 +40,7 @@
         </div>
     </main>
 </body>
+
 </html>
 <script>
     function cadastrar() {
@@ -46,11 +51,11 @@
         var senha = ipt_senha.value;
 
         var textoPreenchido = (nomeUsuario == '' || nomeEmpresa == '' || email == '' || emailCorfirmar == '' || senha == '');
-        
-        while(textoPreenchido){
+
+        while (textoPreenchido) {
             div_mensagemImportante.innerHTML = `Preencha todos os campos`;
         }
 
-        
+
     }
 </script>
