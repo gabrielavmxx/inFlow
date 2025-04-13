@@ -2,6 +2,9 @@
 
 *
 {
+    margin: 0;
+    padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
@@ -20,7 +23,7 @@ h1, p, a
 {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 15px 50px;
     align-items: center;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
@@ -43,17 +46,16 @@ h1, p, a
     margin: 0px;
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .botao_login
 {
-    border-style: none;
     padding: 10px 30px;
     border-radius: 40px;
     background-color: teal;
     color: aliceblue;
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     flex-direction: row;
