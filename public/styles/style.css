@@ -135,14 +135,53 @@ h1, p, a
     flex-direction: column;
     align-items: center;
     background-color: rgb(0, 128, 128);
-    padding: 0px 80px;
 }
 
 .quadrado
 {
-    background-color: red;
-    width: 400px;
-    height: 200px;
+    background-color: aliceblue;
+    width: 300px;
+    height: 300px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: solid 2px gray;
+    padding: 20px;
+}
+
+.imagem-avaliacao
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-size: cover;
+}
+
+.img-nome
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.img1
+{
+    background-image: url(../assets/img/homem1.jpg);   
+}
+
+.img2
+{
+    background-image: url(../assets/img/mulher1.jpg);   
+}
+
+.img3
+{
+    background-image: url(../assets/img/mulher2.jpg);   
+}
+
+.img4
+{
+    background-image: url(../assets/img/homem2.jpg);   
 }
 
 .quad1
@@ -166,6 +205,8 @@ h1, p, a
     gap: 30px;
     margin: 60px 0px;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .titulo-quebra-sessao
