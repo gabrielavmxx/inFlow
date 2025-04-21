@@ -6,6 +6,8 @@
   <title>Dashboard</title>
   <link rel="stylesheet" href="styles/dashboard.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.0/heatmap.min.js"></script>
+
 </head>
 <body>
   <div class="container">
@@ -70,8 +72,9 @@
               </div>
             </div>
           </div>
+
           <div class="grafico g2">
-            <canvas id="grafico2"></canvas>
+            <div id="heatmapContainer"></div>
             <div class="elementosKPI">
               <div class="kpi k1">
                 <p class="titulo">Corredor com maior fluxo</p>
@@ -91,6 +94,8 @@
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </div>
@@ -180,9 +185,31 @@
   //   renderCalendar();
   // };
 
+  const heatmapInstance = h337.create({
+      container: document.getElementById('heatmapContainer'),
+      radius: 70,
+    });
+
+    const data = {
+      max: 100,
+      data: [
+        { x: 600, y: 100, value: 100 },
+        { x: 400, y: 300, value: 60 },
+        { x: 100, y: 400, value: 90 },
+        { x: 200, y: 200, value: 40 },
+        { x: 100, y: 100, value: 70 },
+        { x: 250, y: 450, value: 80 },
+        { x: 500, y: 400, value: 95 },
+        { x: 50, y: 300, value: 40 },
+      ]
+    };
+
+    heatmapInstance.setData(data);
+
+
   // renderCalendar();
   const ctx1 = document.getElementById('grafico1');
-  const ctx2 = document.getElementById('grafico2');
+  // const ctx2 = document.getElementById('grafico2');
 
   const grafico1 = new Chart(ctx1, {
     type: 'line',
@@ -206,25 +233,25 @@
     }
   })
 
-  const grafico2 = new Chart(ctx2, {
-    type: 'bar',
-    data: {
-      labels: ['Corredor 1', 'Corredor 2', 'Corredor 3', 'Corredor 4', 'Corredor 5', 'Corredor 6', 'Corredor 7', 'Corredor 8', 'Corredor 9', 'Corredor 10'],
-      datasets: [{
-        label: 'Pessoas', //<- legenda da tabela
-        data: [10, 22, 43, 32, 11, 54, 43, 21, 55, 53], //<- muda o valor dos dados no grafico para adicionar mais valores é necessario adicionar mais corredores acima
-        borderWidth: 1,
-        borderColor: '#115e59',
-        backgroundColor: '#115e59'
-      }]
-    },
-    options: {
-      // tension: 0.5, <- deixa o gráfico mais arredondado
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  })
+  // const grafico2 = new Chart(ctx2, {
+  //   type: 'bar',
+  //   data: {
+  //     labels: ['Corredor 1', 'Corredor 2', 'Corredor 3', 'Corredor 4', 'Corredor 5', 'Corredor 6', 'Corredor 7', 'Corredor 8', 'Corredor 9', 'Corredor 10'],
+  //     datasets: [{
+  //       label: 'Pessoas', //<- legenda da tabela
+  //       data: [10, 22, 43, 32, 11, 54, 43, 21, 55, 53], //<- muda o valor dos dados no grafico para adicionar mais valores é necessario adicionar mais corredores acima
+  //       borderWidth: 1,
+  //       borderColor: '#115e59',
+  //       backgroundColor: '#115e59'
+  //     }]
+  //   },
+  //   options: {
+  //     // tension: 0.5, <- deixa o gráfico mais arredondado
+  //     scales: {
+  //       y: {
+  //         beginAtZero: true
+  //       }
+  //     }
+  //   }
+  // })
 </script>
