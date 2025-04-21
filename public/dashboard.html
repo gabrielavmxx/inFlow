@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-20">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,86 @@
   <link rel="stylesheet" href="styles/dashboard.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.0/heatmap.min.js"></script>
-
+  <script src="https://kit.fontawesome.com/6921956092.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div class="container">
     <!-- MENU LATERAL -->
     <div id="menu">
-      <div class="logo">
-        <h1>In<span>Flow</span></h1>
-      </div>
-      <div class="escolha">
-        <div class="box">
-          <img src="assets/img/chart.PNG">
-          <h2 class="titulo">Gráficos</h2>
+        <div class="logo">
+          <h1>In<span>Flow</span></h1>
         </div>
-        <div class="box">
-          <img src="assets/img/setting.PNG">
-          <h2 class="titulo">Configurações</h2>
+        <div class="escolha">
+          <div class="box">
+            <div class="icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <p class="titulo">Dashboard</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <a href="cadastro.html" class="titulo">Adicionar usuários</a>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa-solid fa-gear"></i>
+            </div>
+            <p class="titulo">Configurações</p>
+          </div>
         </div>
-      </div>
+        <div class="dadosPerfil">
+          <div class="fotoPerfil conteudo">
+            <img src="assets/img/homem1.jpg" alt="">
+          </div>
+          <div class="infoPerfil conteudo">
+            <p class="nome">Renato</p>
+            <p class="email">renato.silva@gmail.com</p>
+          </div>
+          <div class="maisInfo conteudo">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
     </div>
     <!-- FIM DO MENU LATERAL -->
     <div id="main">
       <div class="conteudoDashboard">
+        <div class="elementosKPI">
+          <div class="kpi k1">
+            <p class="titulo">Corredor com maior fluxo</p>
+            <div class="dados">
+              <p>Corredor 9</p>
+              <p>:</p>
+              <p>55</p>
+            </div>
+          </div>
+          <div class="kpi k2">
+            <p class="titulo">Corredor com menor fluxo</p>
+            <div class="dados">
+              <p>Corredor 1</p>
+              <p>:</p>
+              <p>21</p>
+            </div>
+          </div>
+          <div class="kpi k3">
+            <p class="titulo">Horário com maior fluxo</p>
+            <div class="dados">
+              <p>18:00</p>
+              <p>:</p>
+              <p>88</p>
+            </div>
+          </div>
+          <div class="kpi k4">
+            <p class="titulo">Horário com menor fluxo</p>
+            <div class="dados">
+              <p>11:00</p>
+              <p>:</p>
+              <p>32</p>
+            </div>
+          </div>
+        </div>
         <!-- <div class="calendar">
           <div class="header">
             <button id="prev">&#9664;</button>
@@ -51,50 +109,13 @@
           </div>
         </div> -->
         <div class="conteudoGrafico">
-          <div class="grafico g1">
-            <canvas id="grafico1"></canvas>
-            <div class="elementosKPI">
-              <div class="kpi k3">
-                <p class="titulo">Horário com maior fluxo</p>
-                <div class="dados">
-                  <p>18:00</p>
-                  <p>:</p>
-                  <p>88</p>
-                </div>
-              </div>
-              <div class="kpi k4">
-                <p class="titulo">Horário com menor fluxo</p>
-                <div class="dados">
-                  <p>11:00</p>
-                  <p>:</p>
-                  <p>32</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="grafico g2">
             <div id="heatmapContainer"></div>
-            <div class="elementosKPI">
-              <div class="kpi k1">
-                <p class="titulo">Corredor com maior fluxo</p>
-                <div class="dados">
-                  <p>Corredor 9</p>
-                  <p>:</p>
-                  <p>55</p>
-                </div>
-              </div>
-              <div class="kpi k2">
-                <p class="titulo">Corredor com menor fluxo</p>
-                <div class="dados">
-                  <p>Corredor 1</p>
-                  <p>:</p>
-                  <p>21</p>
-                </div>
-              </div>
-            </div>
           </div>
 
+          <div class="grafico g1">
+            <canvas id="grafico1"></canvas>
+          </div>
 
         </div>
       </div>
@@ -186,25 +207,25 @@
   // };
 
   const heatmapInstance = h337.create({
-      container: document.getElementById('heatmapContainer'),
-      radius: 70,
-    });
+    container: document.getElementById('heatmapContainer'),
+    radius: 70,
+  });
 
-    const data = {
-      max: 100,
-      data: [
-        { x: 600, y: 100, value: 100 },
-        { x: 400, y: 300, value: 60 },
-        { x: 100, y: 400, value: 90 },
-        { x: 200, y: 200, value: 40 },
-        { x: 100, y: 100, value: 70 },
-        { x: 250, y: 450, value: 80 },
-        { x: 500, y: 400, value: 95 },
-        { x: 50, y: 300, value: 40 },
-      ]
-    };
+  const data = {
+    max: 100,
+    data: [
+      { x: 500, y: 100, value: 100 },
+      { x: 400, y: 300, value: 60 },
+      { x: 100, y: 400, value: 90 },
+      { x: 200, y: 200, value: 40 },
+      { x: 100, y: 100, value: 70 },
+      { x: 250, y: 450, value: 80 },
+      { x: 500, y: 400, value: 95 },
+      { x: 50, y: 300, value: 40 },
+    ]
+  };
 
-    heatmapInstance.setData(data);
+  heatmapInstance.setData(data);
 
 
   // renderCalendar();

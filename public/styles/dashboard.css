@@ -7,8 +7,12 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
-  font-family: 'poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -21,6 +25,8 @@ body {
   justify-content: center;
   width: 20%;
   border-right: 1px solid #008080;
+  padding: 10px 20px;
+  height: 100vh;
 }
 
 #menu .logo {
@@ -30,7 +36,7 @@ body {
 }
 
 #menu .logo h1 {
-  font: 400 60px 'Belanosima', sans-serif;
+  font: 400 48px 'Belanosima', sans-serif;
   margin-bottom: 20px;
 }
 
@@ -43,30 +49,79 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0 20px;
 }
 
 #menu .box {
   display: flex;
-  align-items: center;
   margin: 10px 0;
+  align-items: center;
 }
 
-#menu .box img {
+#menu .box a {
+  color: black;
+}
+
+#menu .box .icon {
   width: 50px;
-  margin-right: 10px;
+  text-align: center;
+}
+
+#menu .box i {
+  color: #008080;
+  font-size: 30px;
+}
+
+.dadosPerfil {
+  background-color: #008080;
+  display: flex;
+  align-items: center;
+  padding: 10px 3px;
+  border-radius: 10px;
+}
+
+.dadosPerfil .conteudo {
+  margin: 0 5px;
+}
+
+.fotoPerfil {
+  width: 40px;
+  height: 40px;
+}
+
+.fotoPerfil img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+.infoPerfil p, .maisInfo i {
+  font-size: 12px;
+  color: white;
+}
+
+.infoPerfil .nome {
+  font-weight: 600;
+}
+
+.infoPerfil .email {
+  font-size: 11px;
 }
 /* FIM DO MENU LATERAL */
 
 /* DASHBOARD */
 #main {
   display: flex;
+  width: 100%;
+}
+
+.conteudoDashboard {
+  width: 100%;
 }
 
 .conteudoGrafico {
   display: flex;
   flex-direction: column;
-  margin: 0 40px;
+  margin: 10px 40px;
 }
 
 /* .calendar {
@@ -122,16 +177,23 @@ body {
   font-weight: bold;
 } */
 
+.conteudoGrafico {
+  display: flex;
+  flex-direction: row;
+}
+
 .grafico {
   display: flex;
   align-items: center;
-  width: 70%;
+  width: 50%;
+  margin: 0 10px;
 }
 
 .elementosKPI {
   display: flex;
-  flex-direction: column;
-  gap: 10%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .titulo {
@@ -140,15 +202,14 @@ body {
 }
 
 .kpi {
-  width: 200px;
   height: 100px;
-  padding: 20px;
+  padding: 15px;
   display: flex;
-  margin: 10px 60px;
+  margin: 10px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-radius: 30px;
+  border-radius: 15px;
   color: azure;
 }
 
@@ -163,14 +224,12 @@ body {
 }
 
 #heatmapContainer {
-  width:100%;
-  height: 100%;
+  width: 100%;
+  height: 80vh;
   border: 1px solid #ccc;
-  position: relative;
   background-image: url('../assets/img/mapa.png');
   background-size: cover; 
   background-position: center;
-  z-index: 1;
 }
 
 .dados {
