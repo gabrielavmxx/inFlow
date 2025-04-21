@@ -25,12 +25,14 @@ h1, p, a
 
 /* CABEÇALHO */
 .nav
-{
+{   position: fixed;
     display: flex;
     justify-content: space-between;
     padding: 15px 50px;
     align-items: center;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 100%;
 }
 
 .nav_titulo
@@ -88,6 +90,9 @@ h1, p, a
     padding: 80px 80px;
     justify-content: space-between;
 
+}
+.bloco1 img{
+    border-radius: 20px;
 }
 
 .titulo_principal
@@ -397,7 +402,7 @@ input {
     width: 300px;
     height: 400px;
 }
-.box:hover{
+.bloco4 .box:hover{
     background-color: #008080;
     transform: scale(1.05);
     transition: all 0.5s;
@@ -611,4 +616,157 @@ span {
     width: 400px;
 
     
+}
+/* BOX 6 */
+.bloco6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+
+}
+.bloco6 .sobrenos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    background-color: #008080
+
+}
+.sobrenos img{
+    width: 500px;
+    height: auto;
+    border-radius: 0px 20px 20px 0px;
+
+
+}
+.sobrenos .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.sobrenos .texto h1{
+    font: 400 60px 'Belanosima', sans-serif;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.sobrenos .texto p{
+    font: 400 20px poppins, sans-serif;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    background-color: 0;
+    text-align: center  ;
+    width: 60%;
+
+}
+.bloco6 .boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.bloco6 .box{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: #008080 solid 10px;
+    border-left:  #008080 solid 20px;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    justify-content: center;
+
+}
+.bloco6 .box h4 {
+    font: 500 20px 'Belanosima', sans-serif;
+    margin: 20px;
+    color: #008080;
+    text-align: center;
+}
+.bloco6 .box p {
+    font: 400 16px poppins, sans-serif;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: rgb(46, 45, 45);
+    text-align: center;
+}
+.time{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.heads{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 1000px;
+
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   
+    }
+.head img{
+    width: 200px;
+    height: 200px;
+    border: solid 2px rgb(0, 0, 0, 0.2);
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+.head img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.resultado {
+   width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px;
+    flex-direction: column;
+}
+
+.resultado h1 {
+    font-size: 28px;
+    color: #008080;
+    margin: 0;
+    font-weight: bold;
+}
+.resultado p {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+}
+.resultado span {
+    font-weight: bold;
+    color: #008080;
+}
+.resultado #disclaimer{
+    font-size: 8px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
 }

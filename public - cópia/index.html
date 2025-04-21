@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InFlow - Home</title>
+    <title>InFlow </title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://kit.fontawesome.com/6921956092.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="imagex/png" href="assets/img/logo.ico">
+
 
 </head>
 
@@ -21,7 +23,7 @@
             <a href="index.html" class="nav_item">Home</a> 
             <a href="index.html#solucao" class="nav_item">Solução</a>
             <a href="index.html#comofunciona" class="nav_item">Como funciona</a>
-            <a href="SobreNos.html" class="nav_item">Sobre Nós</a>
+            <a href="index.html#sobrenos" class="nav_item">Sobre Nós</a>
             <a href="index.html#contato" class="nav_item">Contato</a>
 
         </div>
@@ -44,7 +46,7 @@
         <div class="imagem_banner">
 
         </div>
-        <!-- <img src="as<sets/img/supermarket-6594694_640.jpg">  -->
+
     </div>
 
     <div class="home">
@@ -58,7 +60,7 @@
                 <button class="botao_titulo">Saiba Mais</button>
             </div>
             <div>
-                <img class="imagem_japones" src="assets/img/japones.jpeg" alt="japones do mercado">
+                <img class="imagem_japones" src="assets/img/imagembloco1.jpeg" alt="japones do mercado">
             </div>
         </div>
         <div class="separacao">
@@ -168,28 +170,98 @@
                     <p>Calculadora</p>
 
                     <div class="titulo-resposta">
-                        <h1>Calcule agora mesmo seu lucro com nosso sistema</h1>
-                        <p>Insira uma estimativa dos dados sobre os corredores que você considera ser de BAIXO, MÉDIO e
-                            ALTO fluxo.</p>
+                        <h1>Veja como o inFlow pode aumentar os lucros da sua empresa.</h1>
+                       
                     </div>
 
                     <div class="inputs_calc">
-                        <p>Quantas pessoas passam em média por um corredor de ALTO fluxo diariamente?</p>
-                        <input type="text" />
+                        <p>Insira a receita média por visita</p>
+                        <input type="number"  id="ipt_receitamedia"/>
 
-                        <p class="input-texto">Quantos produtos são vendidos em média nesse corredor diariamente?</p>
-                        <input type="text" />
+                        <p class="input-texto"> Insira a quantidade média de visitas por dia</p>
+                        <input type="number"id="ipt_visitasmedia" />
 
-                        <p class="input-texto">Qual o valor médio dos produtos neste corredor?</p>
-                        <input type="text" />
                     </div>
 
-                    <button class="botao_calc">Calcular</button>
+                    <button class="botao_calc" onclick="calcular()">Calcular</button>
                 </div>
 
-                <div class="img_calc">
+                <div class="vazio" id="div_resultado">
+                    
                 </div>
             </div>
+        </div>
+        <div class="bloco6">
+            <div class="sobrenos">
+                <img src="assets/img/people-2557396_1280.jpg">
+                <div class="texto">
+                    <h1 id="sobrenos">Sobre nós</h1>
+                    <p>Somos uma empresa apaixonada por inovação, especializada em monitoramento de fluxo. Ajudamos nossos clientes a entenderem melhor seus espaços eotimizarem seus resultados.</p>
+                </div>
+
+            </div>
+            <div class="boxes">
+                <div class="box">
+                    <h4>Nossa missão</h4>
+                    <p>Transformar dados em inteligência para impulsionar supermercados.</p>
+                </div>
+
+                <div class="box">
+                    <h4>Nossa visão</h4>
+                    <p>Ser referência em soluções inteligentes para o varejo brasileiro.</p>
+
+                </div>
+                <div class="box">
+                    <h4>Nossos valores</h4>
+                    <p>Inovação, transparência e comprometimento com nossos clientes. </p>
+
+                </div>
+
+            </div>
+            <div class="time">
+                <h1>Conheça nosso time!</h1>
+                <div class="heads">
+                    <div class="head">
+                        <div class="imagem">
+                        <img src="assets/img/gabriela.jpeg">
+                    </div>
+                        <p>Gabriela Villegas</p>
+                    </div>
+                    <div class="head">
+                        <div class="imagem">
+                         <img src="assets/img/isabella.jpeg">    
+                        </div>
+                        <p>Isabella Chagas</p>
+                    </div>
+                    <div class="head">
+                        <div class="imagem">
+                            <img src="assets/img/hanieh.jpeg">
+                        </div>
+                        <p>Hanieh Ashouri</p>
+                    </div>
+                    <div class="head">
+                        <div class="imagem">
+                            <img src="assets/img/cats-796437_1280.jpg">
+                        </div>
+                        <p>João Caio</p>
+                    </div>
+                    <div class="head">
+                        <div class="imagem">
+                            <img src="assets/img/cats-796437_1280.jpg">
+                        </div>
+                        <p>Felipe Lavor</p>
+                    </div>
+                    <div class="head">
+                        <div class="imagem">
+                            <img src="assets/img/cats-796437_1280.jpg">
+                        </div>
+                        <p>Leticia Santos</p>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+
         </div>
 
         <div class="todo-rodape">
@@ -215,3 +287,22 @@
 </body>
 
 </html>
+<script>
+    function calcular(){
+        var visitasmedia=Number(ipt_visitasmedia.value)
+        var receitamedia=Number(ipt_receitamedia.value)
+        var lucroatual=visitasmedia*receitamedia
+        var aumento_lucro= lucroatual*1.1           
+         div_resultado.innerHTML+=`<h1>Aumento de lucro!</h1>
+             <p>Seu lucro atual é de ${lucroatual.toFixed(2)}.
+             <p>Utilizando sistemas de monitoramento, seu lucro estimado agora é de <span>${aumento_lucro.toFixed(2)}</span>.
+            <h1> Aumento de 10%</h1>
+            <p id="disclaimer">*Como mostrado em estudos da Accenture, o uso de dados de comportamento do consumidor pode elevar a receita por cliente em 10%. "Using data and AI to truly understand the customer"</p>`
+        if(div_resultado.innerHTML.trim()!=""){
+            div_resultado.className="resultado"
+        } 
+
+
+    }
+
+</script>

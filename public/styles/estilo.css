@@ -53,6 +53,8 @@ span {
     padding: 20px 30px;
     border-radius: 15px;
     justify-content: space-between;
+    width: 80%;
+    align-self: center;
 }
 
 .container-principal .contato_agora {
